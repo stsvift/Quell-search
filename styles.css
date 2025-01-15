@@ -1,0 +1,163 @@
+body {
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1E1E1E;
+}
+
+.title {
+    font-size: 6rem;
+    background: linear-gradient(45deg, #A100FF, #F200FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 20px;
+    font-size: 1.4rem;
+    border: 3px solid #A100FF;
+    border-radius: 40px;
+    background-color: transparent;
+    color: #8A8A8A;
+    outline: none;
+    margin-right: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 15px rgba(161, 0, 255, 0.5);
+    border-color: #A100FF;
+}
+
+.search-input::placeholder {
+    color: #8A8A8A;
+}
+
+.search-button {
+    flex-shrink: 0;
+    padding: 20px 30px;
+    font-size: 1.4rem;
+    background: rgba(161, 0, 255, 0.2);
+    color: #8A8A8A;
+    border: 2px solid #A100FF;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background: rgba(161, 0, 255, 0.3);
+    color: white;
+}
+
+.search-button-icon {
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.footer-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer {
+    font-family: 'JetBrains Mono', monospace;
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.settings-icon {
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: #8A8A8A;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.settings-icon:hover {
+    color: #A100FF;
+    transform: rotate(45deg);
+}
+
+.settings-modal {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 2px solid #A100FF;
+    border-radius: 20px;
+    width: 300px;
+    padding: 20px;
+    color: #FFFFFF;
+    font-family: 'JetBrains Mono', monospace;
+    box-shadow: 0 0 20px rgba(161, 0, 255, 0.3);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.settings-modal .modal-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.settings-modal .search-engine-label {
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.settings-modal .search-engine-selector {
+    width: 100%;
+    padding: 10px;
+    background-color: #2C2C2C;
+    border: 2px solid #A100FF;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.settings-modal .version {
+    color: #8A8A8A;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.settings-modal.show {
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quell</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+    <div class="title">Quell</div>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Ищи вместе с quell..." id="searchInput">
+        <button class="search-button" onclick="performSearch()">
+            Поиск <span class="search-button-icon">🚀</span>
+        </button>
+    </div>
+    <div class="footer-container">
+        <div class="settings-icon" onclick="toggleSettingsModal()">⚙️</div>
+        <div class="footer-wrapper">
+            <div class="footer">
+                Powered by <a href="https://sviftcommunity.ru">sviftcommunity</a> with 💕
+            </div>
+        </div>
+    </div>
+    <div class="settings-modal" id="settingsModal">
+        <div class="modal-title">Quell</div>
+        <label class="search-engine-label">Выберите поисковый движок:</label>
+        <select class="search-engine-selector" id="searchEngineSelector" onchange="saveSearchEngine()">
+            <option value="https://www.google.com/search?q=">Google</option>
+            <option value="https://yandex.ru/search/?text=">Яндекс</option>
+            <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+            <option value="https://www.bing.com/search?q=">Bing</option>
+        </select>
+        <div class="version">Quell 1.0 "Nyx"</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
