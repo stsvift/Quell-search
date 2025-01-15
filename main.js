@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
             performSearch();
         }
     });
+
+    // Autofocus on search input
+    searchInput.focus();
 });
 
 // Save selected search engine to local storage
